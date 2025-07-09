@@ -9,10 +9,10 @@ import RecentItems from "./components/RecentItems";
 import ThoughtSection from "./components/ThoughtSection";
 export default async function Home() {
     const queryClient = getQueryClient();
-    await queryClient.prefetchQuery({
-        queryKey: ['items'],
-        queryFn: () => serverApiService.get({ url: '/api/items' }),
-    });
+    // await queryClient.prefetchQuery({
+    //     queryKey: ['items'],
+    //     queryFn: () => serverApiService.get({ url: '/api/items' }),
+    // });
 
     return (
         <div>

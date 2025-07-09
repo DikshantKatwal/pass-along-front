@@ -9,10 +9,10 @@ import { mockItems } from "./staticData";
 
 
 const RecentItems = () => {
-    const { data: recentItems, isFetching } = useQuery({
-        queryKey: ['items'],
-        queryFn: () => apiService.get('/api/items'),
-    });
+    // const { data: recentItems, isFetching } = useQuery({
+    //     queryKey: ['items'],
+    //     queryFn: () => apiService.get('/api/items'),
+    // });
     if (!mockItems || mockItems.length === 0) return null;
     const mid = Math.ceil(mockItems.length / 2);
     const topItems = mockItems.slice(0, mid);
